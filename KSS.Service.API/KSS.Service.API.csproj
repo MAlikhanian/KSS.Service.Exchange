@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>327ede73-7e0c-4985-b932-65b0c021c696</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.23.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KSS.Service.Application\KSS.Service.Application.csproj" />
+    <ProjectReference Include="..\KSS.Service.Infrastructure\KSS.Service.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Mappings\" />
+    <Folder Include="Middleware\" />
+    <Folder Include="Requests\" />
+    <Folder Include="Validators\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Common\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="KSS.Common">
+      <HintPath>..\..\KSS.Common\KSS.Common\bin\Debug\net10.0\KSS.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
